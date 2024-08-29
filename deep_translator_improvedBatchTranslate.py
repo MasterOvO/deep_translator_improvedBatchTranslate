@@ -36,7 +36,8 @@ class threading_googletranslator(GoogleTranslator):
                         m=m-1
                         split_lst = lst[n:m]
                 #print("exceed char limit, split list for thread ", i+1)
-                result_lst.append(split_lst)
+                print(f"Translating {(i+1)*n}-{(i+1)*m}")
+                result_lst.append(translator.translate_batch(split_lst))
                 #reset after appending
                 n=m
                 m=len(lst)
@@ -74,14 +75,15 @@ start_time_slow = time.time()
 #a = slow_translator.translate_batch(testing_lst)
 end_time_slow = time.time()
 print("Runtime of original batch translator: ", end_time_slow-start_time_slow, "s")
-#runtime = 45s
+#runtime = 50s
 start_time_improve = time.time()
 b = improve_translator.improved_translate_batch(testing_lst, thread_count=10)
 end_time_improve = time.time()
-print(len(b))
+print(b)
 print("Runtime of improve batch translator: ", end_time_improve-start_time_improve, "s")
-#runtime = 0.01s
+#runtime = 7s
 """
+
 
 
 
