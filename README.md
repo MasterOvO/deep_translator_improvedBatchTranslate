@@ -21,7 +21,7 @@ end_time_slow = time.time()
 
 print("Runtime of original batch translator: ", end_time_slow-start_time_slow, "s")
 
-#runtime = 45s
+#runtime = 50s
 
 start_time_improve = time.time()
 
@@ -33,4 +33,4 @@ print(b)
 
 print("Runtime of improve batch translator: ", end_time_improve-start_time_improve, "s")
 
-#runtime = 0.01s
+#runtime = 7s
