@@ -1,7 +1,11 @@
 # deep_translator_improvedBatchTranslate
 -Much faster translating speed using deep_translator google translate
 
-A function for faster translation using deep_translator google translater
+#improve version of deep_translator googletranslator .translate_batch function
+
+#cause orignal batch_translate cant run >5000 character, and slow
+
+#use mutiple thread to run faster
 
 example of usage:
 
