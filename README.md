@@ -29,7 +29,7 @@ b = improve_translator.improved_translate_batch(testing_lst, thread_count=10)
 
 end_time_improve = time.time()
 
-print(len(b))
+print(b)
 
 print("Runtime of improve batch translator: ", end_time_improve-start_time_improve, "s")
 
