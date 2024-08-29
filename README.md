@@ -6,7 +6,7 @@ A function for faster translation using deep_translator google translater
 example of usage:
 """
 #test for speed
-testing_lst = [f"你很快嗎, 我比較快{n}" for n in range(200)]
+testing_lst = [f"你很快嗎, 我比較快{n}" for n in range(200)];
 slow_translator = GoogleTranslator(target="en")
 improve_translator = threading_googletranslator(target="en")
 
